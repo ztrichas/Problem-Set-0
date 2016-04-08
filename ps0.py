@@ -76,8 +76,12 @@ def factorial(x):
 
 def is_it_a_factor(x, y):
 	""" Determines whether the first number is a factor of the 2nd"""
+	if y == 0:
+		return False
+	if x == 0:
+		return False
 	if x and y >= 0:
-		if y % x > 0:
+		if x % y > 0:
 			return False
 		else:
 			return True
